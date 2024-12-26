@@ -8,11 +8,12 @@
 
 ## How to Upgrade CyberPanel to a Specific Version
  
-  wget https://raw.githubusercontent.com/usmannasir/cyberpanel/<branch name>/cyberpanel_upgrade.sh
+ **wget https://raw.githubusercontent.com/usmannasir/cyberpanel/<branch name>/cyberpanel_upgrade.sh**             --> cpanel ki repo per jakr ap us branch k name dye sakhty hn jis k version ap na cpanel ma install krna ha **like v2.1.2** ... here is repo (https://github.com/usmannasir/cyberpanel)
+ 
   
-  chmod +x cyberpanel_upgrade.sh
+  **chmod +x cyberpanel_upgrade.sh**
   
-  ./cyberpanel_upgrade.sh
+  .**/cyberpanel_upgrade.sh**
   
   Step 1: Remove old script:
   First, you have to remove the old script file to get a new and upgrade. Use the command given below to do this.

@@ -5,8 +5,12 @@
 - **link to updgrade cpanel**: https://cyberpanel.net/KnowledgeBase/home/upgrade-cyberpanel/
 - **Cpanel official site**: https://cyberpanel.net/
 - **how to see cpanel version**: you can see the cpanel version from cpanel WEB console> version management (current verions:   , and build: ). you can also verify this from cpanel vm server path (cat /usr/local/CyberCP/version.txt)
+- **how to update cpanel console password**: if your forget cpanel admin console password, but you have access of vm through ssh, then you can update the password using this command **sudo adminPass cpanel**    --> here cpanel is password.. 
 
-## How to Upgrade CyberPanel to a Specific Version
+
+## How to Upgrade CyberPanel to a Specific Version. 
+
+these are the documentation steps. I did this in different way.. job ma cpanel install ker rha tha stable version ki command sa. tb mny installation k time per khub hi minor version diya tha like v2.3.8. jo sahi sa install hogya tha. or phir jb mny usko console sa update kerny ki kosish ki to the major version tu wo ni howa. but mny sable version ki command sa usko update kya tu wo sable version mean 2.3.9 per update hogya... 
  
  **wget https://raw.githubusercontent.com/usmannasir/cyberpanel/<branch name>/cyberpanel_upgrade.sh**             --> cpanel ki repo per jakr ap us branch k name dye sakhty hn jis k version ap na cpanel ma install krna ha **like v2.1.2** ... here is repo (https://github.com/usmannasir/cyberpanel)
  

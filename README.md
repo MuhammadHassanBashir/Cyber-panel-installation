@@ -87,3 +87,50 @@ Steps for deploy Erp next using docker compose
       See Frappe Docker for ARM based docker setup.
 
 
+Use this command where your erpnext is running, in my case erpnext is running inside my container. so i need to ran this inside the container.
+
+Note: you will get the **file name inside the "sites" folder under file named "common_site_config.json". because i am running erpnext as container. so i would find these details under containers.
+
+  bench --site "sitename" backup --with-files
+
+once done it will show you the backup results like this
+
+    frappe@02317eebfcee:~/frappe-bench$ bench --site frontend backup --with-files
+    Backup Summary for frontend at 2024-12-27 19:01:29.692446
+    Config  : ./frontend/private/backups/20241227_190122-frontend-site_config_backup.json 94.0B
+    Database: ./frontend/private/backups/20241227_190122-frontend-database.sql.gz         1.1MiB
+    Public  : ./frontend/private/backups/20241227_190122-frontend-files.tar               10.0KiB
+    Private : ./frontend/private/backups/20241227_190122-frontend-private-files.tar       10.0KiB
+    Backup for Site frontend has been successfully completed with files
+
+
+the file backup path would be "/home/frappe/frappe-bench/sites/frontend/private/backups". 
+
+extracting backup file outside the container
+--------------------------------------------
+
+sudo docker cp 02317eebfcee:/home/frappe/frappe-bench/sites/frontend/private/backups/ ~/erpnext
+
+How to restore the backup:
+-------------------------
+
+    In case of any issues and you need to restore the backup, you can follow these steps:
+
+    Step 1: Place the backup files in the container
+    First, ensure that the backup files are available inside the container at the same backup directory (private/backups), or you can copy them into the container if they are stored outside.
+   
+    Step 2: Restore the backup
+    To restore the backup, use the following command:
+
+   
+          bench --site frontend restore --with-files /path/to/backup-folder
+   
+    This command will restore the backup for your frontend site.
+
+    /path/to/backup-folder should be the path where your backup files (*.sql.gz for the database, *.tar for files) are located.
+
+
+    **example**: bench --site frontend restore --with-files /home/frappe/frappe-bench/sites/frontend/private/backups/20241227_190122-frontend-database.sql.gz
+
+
+

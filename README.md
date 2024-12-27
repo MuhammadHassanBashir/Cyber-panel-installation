@@ -136,4 +136,16 @@ How to restore the backup:
     **example**: bench --site frontend restore --with-files /home/frappe/frappe-bench/sites/frontend/private/backups/20241227_190122-frontend-database.sql.gz
 
 
+erpnext upgration steps
+-----------------------
+      
+      bench switch-to-branch version-15 frappe erpnext --upgrade                           --> agr ap na 14 version run kya howa ha tu is tarha sa 15 upgrade hojye ga..
+      
+      bench --site "site-name" migrate                     --> domain or get from the sites folder under container
+      
+      sudo supervisorctl restart all
+      
+      bench version
+
+
 

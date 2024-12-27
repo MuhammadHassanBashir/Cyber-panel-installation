@@ -106,10 +106,10 @@ once done it will show you the backup results like this
 
 the file backup path would be "/home/frappe/frappe-bench/sites/frontend/private/backups". 
 
-extracting backup file outside the container
+Extracting backup file outside the container
 --------------------------------------------
 
-sudo docker cp 02317eebfcee:/home/frappe/frappe-bench/sites/frontend/private/backups/ ~/erpnext
+      sudo docker cp 02317eebfcee:/home/frappe/frappe-bench/sites/frontend/private/backups/ ~/erpnext
 
 How to restore the backup:
 -------------------------

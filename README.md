@@ -58,3 +58,11 @@ These are documentation steps:
   Updates between official versions
   
   Even when there hasn’t been a new version of CyberPanel officially released, there are always minor updates happening behind the scenes. In order to take advantage of these, you can upgrade CyberPanel at any time.
+
+
+Open source erp next installation link using docker compose
+-----------------------------------------------------------
+
+            https://github.com/frappe/erpnext
+
+

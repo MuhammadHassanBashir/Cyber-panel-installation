@@ -65,4 +65,25 @@ Open source erp next installation link using docker compose
 
             https://github.com/frappe/erpnext
 
+Steps for deploy Erp next using docker compose
+      
+      Self-Hosted
+      -----------
+      
+      Docker
+      Prerequisites: **docker, docker-compose, git**. Refer Docker Documentation for more details on Docker setup.
+      
+      Run following commands:
+      
+      git clone https://github.com/frappe/frappe_docker
+      cd frappe_docker
+      docker compose -f pwd.yml up -d
+
+      After a couple of minutes, site should be accessible on your localhost port: 8080. Use below default login credentials to access the site.
+      
+      Username: Administrator
+      Password: admin
+      
+      See Frappe Docker for ARM based docker setup.
+
 
